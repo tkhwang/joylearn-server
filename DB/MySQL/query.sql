@@ -122,4 +122,7 @@ DROP TABLE CourseTopic;
 DROP TABLE InstructorComment;
 DROP TABLE LectureComment;
 DROP TABLE UserComment;
+DROP TABLE CourseCourseUnit;
+DROP TABLE CourseTopic;
+DROP TABLE courseunits;
 SET foreign_key_checks = 1;

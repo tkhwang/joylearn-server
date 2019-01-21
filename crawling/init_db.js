@@ -2,6 +2,7 @@ const initializeTopics = require('./topic');
 const initializeInstructors = require('./instructors');
 const initializeLecture = require('./lecture');
 const initializeBook = require('./book');
+const initializeCourse = require('./course');
 
 var initDb = () => {
   initializeTopics();
@@ -9,6 +10,8 @@ var initDb = () => {
 
   initializeLecture();
   initializeBook();
+
+  initializeCourse();
 };
 
 initDb();
