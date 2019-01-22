@@ -32,7 +32,7 @@ router.get('/:courseId', async function (req, res, next) {
   console.log('[+] /course/:courseId ', courseId);
   let result = {};
 
-  const course = await Course.findAll({ where: { name: courseId } });
+  const course = await Course.findOne({ where: { name: courseId } });
   console.log('[+] /////////////// course = ', course);
   result['course'] = course;
 
