@@ -32,7 +32,7 @@ router.get('/users/:id', async (req, res, next) => {
   res.send({ user: user });
 });
 
-router.post('/comment/:type/:name', (req, res) => {
+router.post('/comment/:type/:name', async (req, res) => {
   const { type, name } = req.params;
   console.log('[+] /api/:type/:name', type, name);
 
@@ -59,6 +59,18 @@ router.post('/comment/:type/:name', (req, res) => {
       writer: req.body.writer,
       content: req.body.content,
       book_name: name
+    }).then(comment => {
+      res.send(comment);
+    });
+  } else if (type === 'course') {
+    const course = await Course.findOne({
+      where: { name: name }
+    });
+
+    Comment.create({
+      writer: req.body.writer,
+      content: req.body.content,
+      course_id: course.id
     }).then(comment => {
       res.send(comment);
     });
