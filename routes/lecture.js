@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const generateRandomPicture = require('../crawling/random/image');
 
 const { Lecture } = require('../models');
 const { Instructor } = require('../models');
@@ -45,7 +46,8 @@ router.post('/', async (req, res, next) => {
   const newLecture = await Lecture.create({
     name: lecture.name,
     url: lecture.url,
-    image: lecture.image,
+    // image: lecture.image,
+    image: generateRandomPicture(),
     free: lecture.free,
     lang: lecture.lang
   });

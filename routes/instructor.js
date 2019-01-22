@@ -2,6 +2,8 @@ var express = require('express');
 const Sequelize = require('sequelize');
 var router = express.Router();
 
+const generateRandomPicture = require('../crawling/random/image');
+
 const { Instructor } = require('../models');
 const { Lecture } = require('../models');
 const { Comment } = require('../models');
@@ -76,10 +78,11 @@ router.post('/', async (req, res, next) => {
     fullName: instructor.fullName,
     mainUrl: instructor.mainUrl,
     gitHub: instructor.gitHub,
-    image: ''
+    image: generateRandomPicture()
   });
 
   newInstructor.setTopics([instructor.topic]);
+
   res.send(newInstructor);
 });
 
