@@ -1,5 +1,4 @@
 const express = require('express');
-
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 
 const { Comment } = require('../models');
@@ -8,6 +7,8 @@ const { Review } = require('../models');
 const { Instructor } = require('../models');
 const { Lecture } = require('../models');
 const { Book } = require('../models');
+const { Course } = require('../models');
+
 const { ReviewInstructor } = require('../models');
 const { ReviewLecture } = require('../models');
 
@@ -127,6 +128,31 @@ router.post('/review/:type/:name', async (req, res) => {
     book.review = getReviewAverage(reviews);
     await book.save();
 
+    res.send(review);
+  } else if (type === 'course') {
+    const oldCourse = await Course.findOne({
+      where: { name: name }
+    });
+
+    const review = await Review.create({
+      writer: req.body.writer,
+      review: req.body.review,
+      course_id: oldCourse.id
+    });
+
+    console.log('[+] //////////  /api/review', review);
+
+    const reviews = await Review.findAll({
+      where: {
+        course_id: oldCourse.id
+      }
+    });
+
+    const course = await Course.findOne({ where: { name: name } });
+    course.review = getReviewAverage(reviews);
+    await course.save();
+
+    // Return previous review request result.
     res.send(review);
   }
 });

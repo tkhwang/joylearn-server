@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     'course',
     {
       name: {
-        type: DataTypes.STRING(1000),
+        type: DataTypes.STRING(3072),
         allowNull: false
       },
       courses: {
