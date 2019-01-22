@@ -4,6 +4,159 @@ var initializeTopics = () => {
   Topic.create({
     name: 'javascript',
     image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/javascriptlang.png'
+  });
+
+  Topic.create({
+    name: 'jquery',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/jquerylogo.png'
+  });
+
+  Topic.create({
+    name: 'node.js',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/nodejslogo.png'
+  });
+
+  Topic.create({
+    name: 'python',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/2000px-Python-logo-notext.svg.png'
+  });
+
+  Topic.create({
+    name: 'react',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/react.png'
+  });
+
+  Topic.create({
+    name: 'git',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/gitlogo.png'
+  });
+
+  Topic.create({
+    name: 'vue.js',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/vue.png'
+  });
+
+  Topic.create({
+    name: 'angular',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/angular2.png'
+  });
+
+  Topic.create({
+    name: 'android',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/androidlogo.png'
+  });
+
+  Topic.create({
+    name: 'css',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/csslang.png'
+  });
+
+  Topic.create({
+    name: 'scss',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/scsslogo.png'
+  });
+
+  Topic.create({
+    name: 'express',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/expressjslogo.png'
+  });
+
+  Topic.create({
+    name: 'aws',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/aws.png'
+  });
+
+  Topic.create({
+    name: 'mongodb',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/mongodb.png'
+  });
+
+  Topic.create({
+    name: 'reactnative',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/reactnativelogo.png'
+  });
+
+  Topic.create({
+    name: 'reactrouter',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/reactrouter.png'
+  });
+
+  Topic.create({
+    name: 'typescript',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/typescriptlang.png'
+  });
+
+  Topic.create({
+    name: 'graphql',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/graphqllogo.png'
+  });
+
+  Topic.create({
+    name: 'apollo',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/apollo-logo.png'
+  });
+
+  Topic.create({
+    name: 'redux',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/redux.png'
+  });
+
+  Topic.create({
+    name: 'html',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/html5.png'
+  });
+
+  Topic.create({
+    name: 'jquery',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/jquerylogo.png'
+  });
+
+  Topic.create({
+    name: 'algorithm',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/algorithm.jpg'
+  });
+
+  Topic.create({
+    name: 'coding',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/coding.png'
+  });
+
+  Topic.create({
+    name: 'functional',
+    image:
+      'https://s3.ap-northeast-2.amazonaws.com/joy-learn-image/topic/functional.png'
+  });
+};
+
+/*
+var initializeTopicsOld = () => {
+  Topic.create({
+    name: 'javascript',
+    image:
       'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'
   });
 
@@ -170,6 +323,7 @@ var initializeTopics = () => {
       'http://blog.nofluffjuststuff.com/wp-content/uploads/2016/05/2000px-Lambda-logo.svg_-300x300.png'
   });
 };
+*/
 
 initializeTopics();
 
