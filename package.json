@@ -37,7 +37,7 @@
     "joi-objectid": "^2.0.0",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
-    "mongoose": "^5.4.1",
+    "mongoose": "^5.7.5",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
